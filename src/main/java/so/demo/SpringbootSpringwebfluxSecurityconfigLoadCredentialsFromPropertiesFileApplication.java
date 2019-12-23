@@ -53,7 +53,6 @@ class SecurityConfig {
 
     @Bean
     public SecurityWebFilterChain securityFilterChain(ServerHttpSecurity http) {
-        System.out.println("http");
         return http
                 .csrf().disable()
                 .authorizeExchange()
@@ -69,9 +68,6 @@ class SecurityConfig {
 
     @Bean
     public MapReactiveUserDetailsService userDetailsService() {
-        System.out.println("userDetailsService");
-        String hashpw = BCrypt.hashpw("password", BCrypt.gensalt());
-        System.out.println(hashpw);
         UserDetails user = User.builder()
                 .username(environment.getProperty("secret.user"))
                 .password(environment.getProperty("secret.password"))
