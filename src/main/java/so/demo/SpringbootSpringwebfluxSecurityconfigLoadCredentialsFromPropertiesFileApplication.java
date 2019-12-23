@@ -27,7 +27,6 @@ public class SpringbootSpringwebfluxSecurityconfigLoadCredentialsFromPropertiesF
     public static void main(String[] args) {
         SpringApplication.run(SpringbootSpringwebfluxSecurityconfigLoadCredentialsFromPropertiesFileApplication.class, args);
     }
-
 }
 
 @RestController
